@@ -1,0 +1,64 @@
+// onboarding assignment for CodeDay labs
+
+#include <iostream>
+using namespace std;
+
+void print();
+
+int main() {
+
+  print();
+
+  return 0;
+}
+
+void print(){
+  cout << "What do you want to print?" << endl;
+
+  cout << " A) numbers 1-100\n B) numbers 1-100 divisble by 3\n C) numbers 1-100 divisble by 5\n D) numbers 1-100 divisbe by both\n" << endl;
+
+  cout << "Enter a letter choice: ";
+  char choice;
+  // user input 
+  cin >> choice;
+  cout << endl;
+
+  // switch case 
+  switch(choice){
+    case 'A': // print numbers 1-100
+      for(int i = 1; i <= 100; i++){
+        cout << i << " " << endl;
+      }
+      break;
+    case 'B': // print numbers divisble by 3
+      for(int i = 1; i <= 100; i++){
+        cout << i << " ";
+        if(i % 3 == 0){
+          cout << "fizz" << endl;
+        }else{
+          cout << endl;
+        }
+      }
+      break;
+    case 'C': // print numbers divisble by 5
+      for(int i = 1; i <= 100; i++){
+        cout << i << " ";
+        if(i % 5 == 0){
+          cout << "buzz" << endl;
+        }else{
+          cout << endl;
+        }
+      }
+      break;
+    case 'D': // print numbers divisble by both
+      for(int i = 1; i <= 100; i++){
+        cout << i << " ";
+        if(i % 3 == 0 && i % 5 == 0){
+          cout << "fizzbuzz" << endl;
+        }else{
+          cout << endl;
+        }
+      }
+      break;
+  }
+}
